@@ -7,7 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CircularProgress from '@mui/material/CircularProgress';
-
+import { Box } from '@mui/material';
 function Dashboard() {
   const [data, setData] = useState([]);
 
@@ -20,6 +20,9 @@ function Dashboard() {
   }, []);
 
   return (
+    <Box  sx={{mt:6}}>
+
+    
     <Grid container spacing={3}>
       <Grid item xs={12}>
         <Card>
@@ -53,6 +56,7 @@ function Dashboard() {
         </Grid>
       )}
     </Grid>
+    </Box>
   );
 }
 

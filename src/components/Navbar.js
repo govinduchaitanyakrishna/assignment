@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <Typography color="inherit" component={Link} to='/' variant="h6" sx={{ flexGrow: 1,textDecoration:'none' }}>
           EV Dashboard

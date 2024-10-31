@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 import EVChart from '../EVChartUi';
 import Typography from '@mui/material/Typography';
-
+import { Box } from '@mui/material';
 function MakeDistribution() {
   const [data, setData] = useState([]);
 
@@ -15,12 +15,11 @@ function MakeDistribution() {
   }, []);
 
   return (
+    <Box sx={{mt:10}}>
     <div>
-      <Typography variant="h4" gutterBottom>
-        Distribution by Make
-      </Typography>
       {data.length > 0 ? <EVChart data={data} chartType="makeDistribution" /> : <p>Loading data...</p>}
     </div>
+    </Box>
   );
 }
 
